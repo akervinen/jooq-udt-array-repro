@@ -1,0 +1,13 @@
+version: '2.4'
+services:
+  database:
+    image: docker.io/postgres:13
+    ports:
+      - "55432:5432"
+    environment:
+      POSTGRES_USER: sa
+      POSTGRES_PASSWORD: sa
+      POSTGRES_DB: repro
+    cpus: "0.5"
+    mem_limit: 1024m
+    restart: always
